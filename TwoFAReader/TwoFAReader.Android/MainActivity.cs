@@ -12,6 +12,9 @@ namespace TwoFAReader.Android
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+        
+        public static Reader Reader { get; private set; }
+        
         protected override void OnCreate(Bundle savedInstanceState)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
@@ -20,6 +23,9 @@ namespace TwoFAReader.Android
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
+            //TODO: sort ip loading out
+            string ip = "";
+            Reader = new Reader(new UdpGenericSender(ip));
         }
         
         

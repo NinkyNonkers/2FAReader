@@ -15,6 +15,8 @@ namespace TwoFAReader
             string contentLower = content.ToLower();
             if (!contentLower.Contains("steam"))
                 return;
+            string code = content[25..];
+            _sender.Send(code);
         }
         
     }

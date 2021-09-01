@@ -21,5 +21,6 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Reader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UdpGenericSender.cs" />
   </ItemGroup>
 </Project>

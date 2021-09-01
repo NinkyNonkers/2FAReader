@@ -3,15 +3,14 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
-namespace TwoFAReader.iOS
+namespace TwoFAReader
 {
-    public class iOSSender : IMessageSender
+    public class UdpGenericSender : IMessageSender
     {
-
         private readonly UdpClient _udpClient;
         private readonly IPEndPoint _endPoint;
         
-        public iOSSender(string ip)
+        public UdpGenericSender(string ip)
         {
             _udpClient = new UdpClient();
             _udpClient.EnableBroadcast = true;
