@@ -6,9 +6,10 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
+        <Label Text="2FARetriever" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
+        <Entry TextChanged="InputView_OnTextChanged" Text="Enter Code"></Entry>
     </StackLayout>
 
 </ContentPage>

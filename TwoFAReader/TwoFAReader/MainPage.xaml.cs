@@ -13,5 +13,10 @@ namespace TwoFAReader
         {
             InitializeComponent();
         }
+
+        private void InputView_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            TwoFAReader.Reader.SetCode(e.NewTextValue);
+        }
     }
 }

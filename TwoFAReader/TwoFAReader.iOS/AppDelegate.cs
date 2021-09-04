@@ -29,7 +29,7 @@ namespace TwoFAReader.iOS
 
         public override void ReceivedLocalNotification(UIApplication application, UILocalNotification notification)
         {
-            Application.ReaderInstance?.HandleNotification(notification.AlertBody);
+            TwoFAReader.Reader?.HandleNotification(notification.AlertBody);
         }
     }
 }
